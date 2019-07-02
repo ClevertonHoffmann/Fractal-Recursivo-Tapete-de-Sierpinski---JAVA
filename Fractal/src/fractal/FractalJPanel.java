@@ -52,13 +52,16 @@ public class FractalJPanel extends JPanel {
         if (level == 0) {
             g.setColor(Color.BLUE);
             g.fillRect(xA, yA, xB, yB);
-            g.setColor(Color.WHITE);
-            g.fillRect(xA + (xB) / 3, yA + (yB) / 3, xB / 3, yB / 3);
            /* g.setColor(Color.BLUE);
             g.drawOval(xA, yA, xB, yB);
             g.setColor(Color.WHITE);
             g.drawOval(xA + (xB) / 3, yA + (yB) / 3, xB / 3, yB / 3); */
-        } else {
+        } else if(level == 1){
+            g.setColor(Color.BLUE);
+            g.fillRect(xA, yA, xB, yB);
+            g.setColor(Color.WHITE);
+            g.fillRect(xA + (xB) / 3, yA + (yB) / 3, xB / 3, yB / 3);
+        } else{
             //Passo de recursão
             drawFractal(level - 1, xA, yA, xB, yB, g);
 /*P1*/      drawFractal(level - 1, xA, yA, xB / 3, yB / 3, g);
