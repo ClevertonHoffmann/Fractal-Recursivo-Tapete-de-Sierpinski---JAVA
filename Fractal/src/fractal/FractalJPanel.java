@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 public class FractalJPanel extends JPanel {
 
     private Color color; // armazena cor utilizada para desenhar o fractal
-    private int level = 5;   // armazena o nível atual do fractal
+    private int level;   // armazena o nível atual do fractal
 
     private final int WIDTH = 1200;  // define a largura do JPanel
     private final int HEIGHT = 1000; // define a altura do JPanel
@@ -50,7 +50,6 @@ public class FractalJPanel extends JPanel {
     public void drawFractal(int level, int xA, int yA, int xB, int yB, Graphics2D g) {
         // caso básico: desenha o quadrado inicial com um quadrado no meio 
         if (level == 0) {
-            g.setColor(Color.BLUE);
             g.fillRect(xA, yA, xB, yB);
            /* g.setColor(Color.BLUE);
             g.drawOval(xA, yA, xB, yB);
