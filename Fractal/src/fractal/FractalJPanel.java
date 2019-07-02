@@ -54,18 +54,21 @@ public class FractalJPanel extends JPanel {
             g.fillRect(xA, yA, xB, yB);
             g.setColor(Color.WHITE);
             g.fillRect(xA + (xB) / 3, yA + (yB) / 3, xB / 3, yB / 3);
+           /* g.setColor(Color.BLUE);
+            g.drawOval(xA, yA, xB, yB);
+            g.setColor(Color.WHITE);
+            g.drawOval(xA + (xB) / 3, yA + (yB) / 3, xB / 3, yB / 3); */
         } else {
             //Passo de recursão
             drawFractal(level - 1, xA, yA, xB, yB, g);
-            drawFractal(level - 1, xA + ((xB) / 3) * 2, yA + ((yB) / 3) * 2, xB / 3, yB / 3, g);
-            drawFractal(level - 1, xA, yA, xB / 3, yB / 3, g);
-            drawFractal(level - 1, xA + ((xB) / 3) * 2, yA, xB / 3, yB / 3, g);
-            drawFractal(level - 1, xA, yA + ((yB) / 3) * 2, xB / 3, yB / 3, g);
-            drawFractal(level - 1, xA + ((xB) / 3), yA + ((yB) / 3) * 2, xB / 3, yB / 3, g);
-            drawFractal(level - 1, xA + ((xB) / 3) * 2, yA + ((yB) / 3), xB / 3, yB / 3, g);
-            drawFractal(level - 1, xA + ((xB) / 3), yA, xB / 3, yB / 3, g);
-            drawFractal(level - 1, xA, yA + ((yB) / 3), xB / 3, yB / 3, g);
-
+/*P1*/      drawFractal(level - 1, xA, yA, xB / 3, yB / 3, g);
+/*P2*/      drawFractal(level - 1, xA + ((xB) / 3), yA, xB / 3, yB / 3, g);
+/*P3*/      drawFractal(level - 1, xA + ((xB) / 3) * 2, yA, xB / 3, yB / 3, g);
+/*P4*/      drawFractal(level - 1, xA, yA + ((yB) / 3), xB / 3, yB / 3, g);
+/*P5*/      drawFractal(level - 1, xA + ((xB) / 3) * 2, yA + ((yB) / 3), xB / 3, yB / 3, g);
+/*P6*/      drawFractal(level - 1, xA, yA + ((yB) / 3) * 2, xB / 3, yB / 3, g);
+/*P7*/      drawFractal(level - 1, xA + ((xB) / 3), yA + ((yB) / 3) * 2, xB / 3, yB / 3, g);
+/*P8*/      drawFractal(level - 1, xA + ((xB) / 3) * 2, yA + ((yB) / 3) * 2, xB / 3, yB / 3, g);
         } // fim do else                                                
     } // fim do método drawFractal  
 

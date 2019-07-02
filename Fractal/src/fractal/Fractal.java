@@ -16,7 +16,7 @@ import javax.swing.JPanel;
 public class Fractal extends JFrame{
    private final int WIDTH = 1000;  // define a largura de GUI
    private final int HEIGHT = 600; // define a altura de GUI
-   private final int MIN_LEVEL = 0, MAX_LEVEL = 20;
+   private final int MIN_LEVEL = 0, MAX_LEVEL = 6;
    private Color color = Color.BLUE;
 
    private JButton increaseLevelJButton, decreaseLevelJButton;
